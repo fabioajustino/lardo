@@ -1,0 +1,118 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    --background: 0 0% 98%;
+    --foreground: 0 15% 15%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 0 15% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 15% 15%;
+
+    /* Lardo Restaurant Brand Colors */
+    --primary: 352 73% 39%; /* #A72026 - Lardo Red */
+    --primary-foreground: 0 0% 98%;
+    --primary-hover: 352 73% 35%;
+    --primary-light: 352 73% 95%;
+
+    --secondary: 0 0% 96%;
+    --secondary-foreground: 0 15% 15%;
+
+    --muted: 0 0% 96%;
+    --muted-foreground: 0 10% 50%;
+
+    --accent: 352 30% 95%;
+    --accent-foreground: 352 73% 25%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 0 0% 90%;
+    --input: 0 0% 96%;
+    --ring: 352 73% 39%;
+
+    /* Custom design tokens */
+    --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(352 73% 45%));
+    --gradient-subtle: linear-gradient(180deg, hsl(var(--background)), hsl(0 0% 96%));
+    --shadow-elegant: 0 4px 20px -2px hsl(var(--primary) / 0.1);
+    --shadow-card: 0 2px 10px -1px hsl(0 0% 0% / 0.05);
+    --transition-smooth: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+
+    --radius: 0.5rem;
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 0 15% 8%;
+    --foreground: 0 0% 95%;
+
+    --card: 0 15% 10%;
+    --card-foreground: 0 0% 95%;
+
+    --popover: 0 15% 10%;
+    --popover-foreground: 0 0% 95%;
+
+    --primary: 352 73% 45%;
+    --primary-foreground: 0 0% 98%;
+    --primary-hover: 352 73% 40%;
+    --primary-light: 352 73% 15%;
+
+    --secondary: 0 0% 15%;
+    --secondary-foreground: 0 0% 85%;
+
+    --muted: 0 0% 15%;
+    --muted-foreground: 0 0% 60%;
+
+    --accent: 352 30% 15%;
+    --accent-foreground: 352 73% 75%;
+
+    --destructive: 0 62.8% 45%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 0 0% 20%;
+    --input: 0 0% 15%;
+    --ring: 352 73% 45%;
+
+    --sidebar-background: 0 15% 8%;
+    --sidebar-foreground: 0 0% 85%;
+    --sidebar-primary: 352 73% 45%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 0 0% 15%;
+    --sidebar-accent-foreground: 0 0% 85%;
+    --sidebar-border: 0 0% 20%;
+    --sidebar-ring: 352 73% 45%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
